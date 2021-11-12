@@ -9,7 +9,7 @@ namespace LogicalPrograms
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Choose an Option To Execute the Program\n 1.FibonacciSeries\n 2.Exit");
+                Console.WriteLine("Choose an Option To Execute the Program\n 1.FibonacciSeries\n 2.ReverseOfNumber\n 5.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -20,6 +20,12 @@ namespace LogicalPrograms
                         result.Fibonacci(number);
                         break;
                     case 2:
+                        Console.WriteLine("Enter The Number");
+                        int number1 = Convert.ToInt32(Console.ReadLine());
+                        PerfectNumber result1 = new PerfectNumber();
+                        result1. Perfect(number1);
+                        break;
+                    case 3:
                         flag = false;
                         break;
                     default:
