@@ -9,7 +9,7 @@ namespace LogicalPrograms
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Choose an Option To Execute the Program\n 1.FibonacciSeries\n 2.ReverseOfNumber\n 3.PrimeNumber\n 4.PerfectNumber\n 5.TemperatureConversion\n 6.DayOfWeek\n 7.MonthlyPayment\n 8.Exit");
+                Console.WriteLine("Choose an Option To Execute the Program\n 1.FibonacciSeries\n 2.ReverseOfNumber\n 3.PrimeNumber\n 4.PerfectNumber\n 5.TemperatureConversion\n 6.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -37,17 +37,15 @@ namespace LogicalPrograms
                         PerfectNumber result3 = new PerfectNumber();
                         result3.Perfect(number3);
                         break;
-                    case 6:
-                        Console.WriteLine("Enter principle amount");
-                        double P = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("Enter Year");
-                        double Y = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("Enter Rate of interest");
-                        double R = Convert.ToInt32(Console.ReadLine());
-                        MonthlyPayment result6 = new MonthlyPayment();
-                        result6.Payment(P, Y, R);
+                    case 5:
+                        Console.WriteLine("Enter The Temperture");
+                        int temp = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter The Unit");
+                        char unit = Convert.ToChar(Console.ReadLine());
+                        TemperatureConversion result4 = new TemperatureConversion();
+                        result4.Temp(temp, unit);
                         break;
-                    case 7:
+                    case 6:
                         flag = false;
                         break;
                     default:
