@@ -9,7 +9,7 @@ namespace LogicalPrograms
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Choose an Option To Execute the Program\n 1.FibonacciSeries\n 2.ReverseOfNumber\n 3.Exit");
+                Console.WriteLine("Choose an Option To Execute the Program\n 1.FibonacciSeries\n 2.ReverseOfNumber\n 3.PrimeNumber\n 4.PerfectNumber\n 5.TemperatureConversion\n 6.DayOfWeek\n 7.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -26,6 +26,28 @@ namespace LogicalPrograms
                         result1.Reverse(number1);
                         break;
                     case 3:
+                        Console.WriteLine("Enter The Number");
+                        int number2 = Convert.ToInt32(Console.ReadLine());
+                        PrimeNumber result2 = new PrimeNumber();
+                        result2.Prime(number2);
+                        break;
+                    case 4:
+                        Console.WriteLine("Enter The Number");
+                        int number3 = Convert.ToInt32(Console.ReadLine());
+                        PerfectNumber result3 = new PerfectNumber();
+                        result3.Perfect(number3);
+                        break;
+                    case 5:
+                        Console.WriteLine("Enter The Day: ");
+                        int day = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter The Week: ");
+                        int month = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter The year: ");
+                        int year = Convert.ToInt32(Console.ReadLine());
+                        DayOfaWeek result5 = new DayOfaWeek();
+                        result5.Day(day, month, year);
+                        break;
+                    case 6:
                         flag = false;
                         break;
                     default:
@@ -33,6 +55,7 @@ namespace LogicalPrograms
                         break;
                 }
             }
+
         }
     }
 }
